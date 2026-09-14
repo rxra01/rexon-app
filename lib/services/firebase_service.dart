@@ -68,6 +68,15 @@ class FirebaseService {
   int? _resendToken;
   ConfirmationResult? _webConfirmationResult;
 
+  String? get verificationId => _verificationId;
+  ConfirmationResult? get webConfirmationResult => _webConfirmationResult;
+
+  void resetVerification() {
+    _verificationId = null;
+    _resendToken = null;
+    _webConfirmationResult = null;
+  }
+
   /// Initiate Phone OTP flow for Indian mobile numbers (+91)
   Future<void> sendPhoneOtp({
     required String phoneNumber,
@@ -93,27 +102,37 @@ class FirebaseService {
         onCodeSent('web_confirmation');
       } on FirebaseAuthException catch (e) {
         onVerificationFailed(e);
+      } catch (e) {
+        onVerificationFailed(
+          FirebaseAuthException(code: 'web-phone-error', message: e.toString()),
+        );
       }
     } else {
-      await auth.verifyPhoneNumber(
-        phoneNumber: formattedPhone,
-        timeout: const Duration(seconds: 60),
-        verificationCompleted: (PhoneAuthCredential credential) {
-          onAutoVerified(credential);
-        },
-        verificationFailed: (FirebaseAuthException e) {
-          onVerificationFailed(e);
-        },
-        codeSent: (String verificationId, int? resendToken) {
-          _verificationId = verificationId;
-          _resendToken = resendToken;
-          onCodeSent(verificationId);
-        },
-        codeAutoRetrievalTimeout: (String verificationId) {
-          _verificationId = verificationId;
-        },
-        forceResendingToken: _resendToken,
-      );
+      try {
+        await auth.verifyPhoneNumber(
+          phoneNumber: formattedPhone,
+          timeout: const Duration(seconds: 60),
+          verificationCompleted: (PhoneAuthCredential credential) {
+            onAutoVerified(credential);
+          },
+          verificationFailed: (FirebaseAuthException e) {
+            onVerificationFailed(e);
+          },
+          codeSent: (String verificationId, int? resendToken) {
+            _verificationId = verificationId;
+            _resendToken = resendToken;
+            onCodeSent(verificationId);
+          },
+          codeAutoRetrievalTimeout: (String verificationId) {
+            _verificationId = verificationId;
+          },
+          forceResendingToken: _resendToken,
+        );
+      } catch (e) {
+        onVerificationFailed(
+          FirebaseAuthException(code: 'send-otp-error', message: e.toString()),
+        );
+      }
     }
   }
 

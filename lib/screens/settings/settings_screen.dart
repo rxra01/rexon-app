@@ -263,19 +263,22 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Reset to Sample Indian Retailer Data',
-                              style: GoogleFonts.manrope(fontWeight: FontWeight.w700),
-                            ),
-                            Text(
-                              'Restores 12 retail items, 4 customers, and sample bills',
-                              style: GoogleFonts.manrope(fontSize: 12, color: AppTheme.textMuted),
-                            ),
-                          ],
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Reset to Sample Indian Retailer Data',
+                                style: GoogleFonts.manrope(fontWeight: FontWeight.w700),
+                              ),
+                              Text(
+                                'Restores 12 retail items, 4 customers, and sample bills',
+                                style: GoogleFonts.manrope(fontSize: 12, color: AppTheme.textMuted),
+                              ),
+                            ],
+                          ),
                         ),
+                        const SizedBox(width: 12),
                         OutlinedButton(
                           onPressed: () async {
                             await retail.resetDemo();
@@ -293,19 +296,22 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Sign Out of Store',
-                              style: GoogleFonts.manrope(fontWeight: FontWeight.w700),
-                            ),
-                            Text(
-                              'Returns to login screen',
-                              style: GoogleFonts.manrope(fontSize: 12, color: AppTheme.textMuted),
-                            ),
-                          ],
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Sign Out of Store',
+                                style: GoogleFonts.manrope(fontWeight: FontWeight.w700),
+                              ),
+                              Text(
+                                'Returns to login screen',
+                                style: GoogleFonts.manrope(fontSize: 12, color: AppTheme.textMuted),
+                              ),
+                            ],
+                          ),
                         ),
+                        const SizedBox(width: 12),
                         ElevatedButton.icon(
                           icon: const Icon(Icons.logout_rounded, size: 18),
                           label: const Text('Sign Out'),
