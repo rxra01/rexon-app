@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><title>Inventra</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary-fixed-variant": "#003ea8", "surface-container-lowest": "#ffffff", "primary-fixed": "#dae2fd", "outline": "#76777d", "secondary-container": "#316bf3", "on-tertiary": "#ffffff", "secondary": "#0051d5", "secondary-fixed": "#dbe1ff", "on-tertiary-fixed-variant": "#005236", "on-primary-fixed-variant": "#3f465c", "surface-container-low": "#eff4ff", "surface-tint": "#565e74", "surface-container-high": "#dce9ff", "tertiary-fixed": "#6ffbbe", "on-secondary-fixed": "#00174b", "background": "#f8f9ff", "on-surface": "#0b1c30", "primary-fixed-dim": "#bec6e0", "outline-variant": "#c6c6cd", "inverse-surface": "#213145", "surface-dim": "#cbdbf5", "on-background": "#0b1c30", "on-error-container": "#93000a", "surface-container": "#e5eeff", "inverse-primary": "#bec6e0", "tertiary": "#000000", "primary": "#000000", "on-secondary-container": "#fefcff", "error-container": "#ffdad6", "on-error": "#ffffff", "tertiary-fixed-dim": "#4edea3", "on-tertiary-container": "#009668", "surface-bright": "#f8f9ff", "surface-container-highest": "#d3e4fe", "surface-variant": "#d3e4fe", "on-surface-variant": "#45464d", "surface": "#f8f9ff", "error": "#ba1a1a", "primary-container": "#131b2e", "on-secondary": "#ffffff", "tertiary-container": "#002113", "inverse-on-surface": "#eaf1ff", "on-tertiary-fixed": "#002113", "on-primary-fixed": "#131b2e", "on-primary-container": "#7c839b", "secondary-fixed-dim": "#b4c5ff", "on-primary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2rem", "gutter": "1rem", "space-md": "1rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "gutter-mobile": "0.75rem", "space-lg": "1.5rem", "margin": "1.5rem", "margin-mobile": "1rem" }, "fontFamily": { "display-lg": ["Plus Jakarta Sans"], "label-md": ["Manrope"], "headline-sm": ["Plus Jakarta Sans"], "body-md": ["Manrope"], "body-sm": ["Manrope"], "headline-md": ["Plus Jakarta Sans"], "body-lg": ["Manrope"], "headline-lg": ["Plus Jakarta Sans"], "data-mono": ["Manrope"], "label-lg": ["Manrope"], "label-sm": ["Manrope"] }, "fontSize": { "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "500" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "data-mono": ["14px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }] } } } }</script><style>@layer base { html, body { width: 100vw; min-height: 100vh; margin: 0; padding: 0; } body { -webkit-font-smoothing: antialiased; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style></head><body class="bg-background font-body-md text-body-md text-on-surface min-h-screen flex flex-col antialiased selection:bg-secondary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0 flex-1"><img alt="Inventra Brand Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvItZ8HLKCapmU_986Q2z7ngdkTPrHvCsyNYybjZ_1OQ2WjmDMch7EM0JJ8TSgoyW7AAasacIh8COL2dhAONOrkXX_Q1vcm3iN5MiT-MnI0B6aZQhQa1FuG7xAy-aOJNegX4OmH28LDpaMQq7JyZakD6vLlepZeuvCwOYzDFRbD3rQrZdZq45pVWSWUU5DkyJwBhdtfCbY8iZLYpY4vipwxLAmL7BQFidNHeYEBgjXXFp8YK9vLnrR"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Inventra</span><span class="text-on-surface-variant/40 text-[10px]">•</span><span class="font-label-sm text-label-sm text-secondary font-semibold truncate">Invoices</span></div><button class="flex items-center gap-1 min-h-[24px] text-left group" type="button"><span class="font-headline-sm text-headline-sm text-on-surface truncate group-hover:text-secondary transition-colors">Acme Retail Hub</span><span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:text-secondary transition-colors">expand_more</span></button></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container transition-colors relative" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-secondary ring-2 ring-surface"></span></button><div class="pl-space-xs flex items-center"><button aria-label="Account profile" class="w-11 h-11 flex items-center justify-center rounded-full hover:opacity-90 transition-opacity" type="button"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWPBagfCMEbJzHbHCDSpinVYj_fynvcbs8T3nXO9wADOsYZWWmSAZbg7ghD4nSSxDSK5BqdYhWJhvWCw3R1ziA0hZG6pZkcCEzBDAbQZtnT0PeQMNlpiqSKRsLcuVCa8ENJR7EbyPqHUP-Zsmp9LUhVIcnTfUOCYr3czXUDDYD0lYW0YRHJvigff73UQrAxaOi5TIEJqyMRHDqUaNqnBfHO8CcqSaDbBgvgRgGB5XpspZXYzvL2Dxr"/></button></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full px-margin-mobile space-y-space-md">
+<!-- Executive Header Snippet with Invoice ID & Timestamp -->
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-secondary-fixed text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[16px]">receipt</span>
+</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Draft Invoice</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">#INV-2024-8831</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Live Billing</span>
+</div>
+</div>
+<!-- SECTION 1: Customer Details -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">person</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Customer Details</h2>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-fixed px-2 py-0.5 rounded-full font-semibold">Quick Client</span>
+</div>
+<div class="space-y-space-sm">
+<!-- Customer Name Input -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1" for="cust-name">Client Full Name</label>
+<div class="relative flex items-center">
+<input class="w-full h-11 px-3 pl-10 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest transition-all" id="cust-name" placeholder="Enter full name" type="text" value="Sarah Jenkins"/>
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant/70 text-[18px]">badge</span>
+<button class="absolute right-2 px-2 py-1 rounded-md text-secondary hover:bg-secondary-fixed/50 font-label-sm text-label-sm transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">history</span> Recent
+          </button>
+</div>
+</div>
+<!-- Phone Number with Contacts Picker -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1" for="cust-phone">Mobile / WhatsApp Number</label>
+<div class="flex gap-space-xs">
+<div class="relative flex-1 flex items-center">
+<input class="w-full h-11 px-3 pl-10 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest transition-all" id="cust-phone" placeholder="+1 (555) 000-0000" type="tel" value="+1 (555) 234-8901"/>
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant/70 text-[18px]">call</span>
+</div>
+<button class="h-11 px-3.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center gap-1 transition-colors active:scale-95 shadow-sm" id="btn-contacts" title="Select from Contacts" type="button">
+<span class="material-symbols-outlined text-secondary text-[20px]">contacts</span>
+<span class="hidden sm:inline font-label-sm text-label-sm">Contacts</span>
+</button>
+</div>
+</div>
+<!-- Optional Tax / Address Accordion -->
+<div class="pt-1">
+<button class="w-full flex items-center justify-between py-2 px-3 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors" id="toggle-accordion" type="button">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">corporate_fare</span>
+<span class="font-label-md text-label-md">Billing Address, GSTIN &amp; Tax ID</span>
+</div>
+<span class="material-symbols-outlined text-[18px] transition-transform duration-200" id="accordion-icon">expand_more</span>
+</button>
+<div class="hidden mt-2 p-3 rounded-lg bg-surface-container-low space-y-3" id="accordion-content">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1">GSTIN / VAT ID</label>
+<input class="w-full h-9 px-3 rounded bg-surface-container-lowest text-on-surface font-data-mono text-body-sm focus:outline-none" placeholder="e.g. 27AABCS1429B1ZB" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1">PO Reference #</label>
+<input class="w-full h-9 px-3 rounded bg-surface-container-lowest text-on-surface font-body-sm text-body-sm focus:outline-none" placeholder="PO-2024-918" type="text"/>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1">Street Address</label>
+<input class="w-full h-9 px-3 rounded bg-surface-container-lowest text-on-surface font-body-sm text-body-sm focus:outline-none" type="text" value="742 Evergreen Terrace, Suite 400"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 2: Billed Items List -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">shopping_cart</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Billed Items</h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant font-bold" id="item-count-badge">3 items</span>
+</div>
+<button class="flex items-center gap-1 font-label-sm text-label-sm text-secondary hover:underline" id="btn-quick-scan" type="button">
+<span class="material-symbols-outlined text-[16px]">barcode_scanner</span>
+<span>Scan Barcode</span>
+</button>
+</div>
+<!-- Line Items Table / Flow -->
+<div class="space-y-space-sm" id="line-items-container">
+<!-- Item 1 -->
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-2 relative group hover:bg-surface-container transition-colors" data-id="1">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5 min-w-0 flex-1">
+<div class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center flex-shrink-0 shadow-sm text-secondary">
+<span class="material-symbols-outlined text-[20px]">mouse</span>
+</div>
+<div class="min-w-0 flex-1">
+<h3 class="font-body-lg text-body-lg text-on-surface font-semibold truncate">Wireless Ergonomic Mouse</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">SKU: WEM-091 • Unit: $29.99</p>
+</div>
+</div>
+<button aria-label="Remove item" class="w-8 h-8 rounded-full flex items-center justify-center text-error hover:bg-error-container transition-colors" onclick="deleteItem(this, 59.98)" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-2 bg-surface-container-lowest rounded-lg p-1 shadow-sm">
+<button class="w-7 h-7 rounded flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors" onclick="adjustQty(this, -1)" type="button">
+<span class="material-symbols-outlined text-[14px]">remove</span>
+</button>
+<span class="font-data-mono text-data-mono px-2 text-on-surface font-semibold">2</span>
+<button class="w-7 h-7 rounded flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors" onclick="adjustQty(this, 1)" type="button">
+<span class="material-symbols-outlined text-[14px]">add</span>
+</button>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Line Total</span>
+<span class="font-data-mono text-headline-sm text-on-surface font-bold line-total-val" data-price="29.99">$59.98</span>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-2 relative group hover:bg-surface-container transition-colors" data-id="2">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5 min-w-0 flex-1">
+<div class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center flex-shrink-0 shadow-sm text-secondary">
+<span class="material-symbols-outlined text-[20px]">cable</span>
+</div>
+<div class="min-w-0 flex-1">
+<h3 class="font-body-lg text-body-lg text-on-surface font-semibold truncate">USB-C Fast Charging Cable 2m</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">SKU: CAB-USBC2 • Unit: $14.99</p>
+</div>
+</div>
+<button aria-label="Remove item" class="w-8 h-8 rounded-full flex items-center justify-center text-error hover:bg-error-container transition-colors" onclick="deleteItem(this, 44.97)" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-2 bg-surface-container-lowest rounded-lg p-1 shadow-sm">
+<button class="w-7 h-7 rounded flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors" onclick="adjustQty(this, -1)" type="button">
+<span class="material-symbols-outlined text-[14px]">remove</span>
+</button>
+<span class="font-data-mono text-data-mono px-2 text-on-surface font-semibold">3</span>
+<button class="w-7 h-7 rounded flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors" onclick="adjustQty(this, 1)" type="button">
+<span class="material-symbols-outlined text-[14px]">add</span>
+</button>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Line Total</span>
+<span class="font-data-mono text-headline-sm text-on-surface font-bold line-total-val" data-price="14.99">$44.97</span>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-2 relative group hover:bg-surface-container transition-colors" data-id="3">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5 min-w-0 flex-1">
+<div class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center flex-shrink-0 shadow-sm text-secondary">
+<span class="material-symbols-outlined text-[20px]">laptop_chromebook</span>
+</div>
+<div class="min-w-0 flex-1">
+<h3 class="font-body-lg text-body-lg text-on-surface font-semibold truncate">Protective Laptop Sleeve 14"</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">SKU: SLV-14N • Unit: $24.00</p>
+</div>
+</div>
+<button aria-label="Remove item" class="w-8 h-8 rounded-full flex items-center justify-center text-error hover:bg-error-container transition-colors" onclick="deleteItem(this, 24.00)" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-2 bg-surface-container-lowest rounded-lg p-1 shadow-sm">
+<button class="w-7 h-7 rounded flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors" onclick="adjustQty(this, -1)" type="button">
+<span class="material-symbols-outlined text-[14px]">remove</span>
+</button>
+<span class="font-data-mono text-data-mono px-2 text-on-surface font-semibold">1</span>
+<button class="w-7 h-7 rounded flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors" onclick="adjustQty(this, 1)" type="button">
+<span class="material-symbols-outlined text-[14px]">add</span>
+</button>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Line Total</span>
+<span class="font-data-mono text-headline-sm text-on-surface font-bold line-total-val" data-price="24.00">$24.00</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Buttons for adding items -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm pt-2">
+<button class="w-full h-11 rounded-lg bg-secondary text-on-secondary font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-sm hover:bg-secondary-container transition-all active:scale-98" id="btn-open-catalog" type="button">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>Add from Inventory</span>
+</button>
+<button class="w-full h-11 rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg flex items-center justify-center gap-2 hover:bg-surface-container-high transition-all active:scale-98" id="btn-custom-item" type="button">
+<span class="material-symbols-outlined text-[20px]">post_add</span>
+<span>Add Custom Item</span>
+</button>
+</div>
+</div>
+<!-- SECTION 3: Payment & Calculation Summary Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">account_balance_wallet</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Payment &amp; Totals</h2>
+</div>
+<!-- Status Badge toggle -->
+<div class="flex items-center gap-1 bg-surface-container-low p-1 rounded-full">
+<button class="px-3 py-1 rounded-full font-label-sm text-label-sm font-bold transition-all bg-tertiary-fixed text-on-tertiary-fixed shadow-sm" id="badge-paid" type="button">
+          Paid
+        </button>
+<button class="px-3 py-1 rounded-full font-label-sm text-label-sm font-bold text-on-surface-variant hover:text-on-surface transition-all" id="badge-pending" type="button">
+          Pending
+        </button>
+</div>
+</div>
+<!-- Calculation Rows -->
+<div class="space-y-2.5 pt-1">
+<div class="flex items-center justify-between font-body-md text-body-md text-on-surface-variant">
+<span>Items Subtotal</span>
+<span class="font-data-mono font-semibold text-on-surface" id="summary-subtotal">$128.95</span>
+</div>
+<!-- Discount Input / Tag -->
+<div class="flex items-center justify-between gap-2 p-2 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-secondary text-[18px]">local_offer</span>
+<span class="font-label-md text-label-md text-on-surface truncate">Coupon DISC10</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">Applied</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="font-data-mono text-label-lg text-error font-semibold" id="summary-discount">-$10.00</span>
+<button class="text-on-surface-variant hover:text-on-surface" title="Change Coupon" type="button">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+</button>
+</div>
+</div>
+<!-- Tax Row -->
+<div class="flex items-center justify-between font-body-md text-body-md text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span>VAT / Estimated Tax</span>
+<span class="text-xs px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm">8%</span>
+</div>
+<span class="font-data-mono font-semibold text-on-surface" id="summary-tax">$9.52</span>
+</div>
+<!-- Grand Total Highlight -->
+<div class="pt-3 border-t-0 flex items-baseline justify-between p-3 rounded-xl bg-surface-container-high">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block font-bold">Grand Total Due</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Includes taxes &amp; discounts</span>
+</div>
+<div class="text-right">
+<span class="font-display-lg text-display-lg text-secondary font-bold" id="summary-grandtotal">$128.47</span>
+</div>
+</div>
+</div>
+<!-- Payment Method Selector -->
+<div class="space-y-2 pt-2">
+<label class="block font-label-md text-label-md text-on-surface-variant">Selected Payment Mode</label>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2" id="payment-methods">
+<button class="pay-option flex flex-col items-center justify-center p-2.5 rounded-xl bg-secondary text-on-secondary shadow-sm transition-all text-center group" data-method="pos" type="button">
+<span class="material-symbols-outlined text-[22px] mb-1">credit_card</span>
+<span class="font-label-sm text-label-sm font-semibold">Card / POS</span>
+</button>
+<button class="pay-option flex flex-col items-center justify-center p-2.5 rounded-xl bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-all text-center group" data-method="cash" type="button">
+<span class="material-symbols-outlined text-[22px] mb-1 text-on-surface-variant">payments</span>
+<span class="font-label-sm text-label-sm font-semibold">Cash</span>
+</button>
+<button class="pay-option flex flex-col items-center justify-center p-2.5 rounded-xl bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-all text-center group" data-method="bank" type="button">
+<span class="material-symbols-outlined text-[22px] mb-1 text-on-surface-variant">account_balance</span>
+<span class="font-label-sm text-label-sm font-semibold">Bank Wire</span>
+</button>
+<button class="pay-option flex flex-col items-center justify-center p-2.5 rounded-xl bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-all text-center group" data-method="upi" type="button">
+<span class="material-symbols-outlined text-[22px] mb-1 text-on-surface-variant">qr_code_scanner</span>
+<span class="font-label-sm text-label-sm font-semibold">UPI / Wallet</span>
+</button>
+</div>
+</div>
+</div>
+<!-- SECTION 4: Action Bar (High-Impact Operational Controls) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-sm mb-6">
+<!-- Primary Flow Button -->
+<button class="w-full h-13 py-3.5 px-4 rounded-xl bg-secondary text-on-secondary font-headline-sm text-headline-sm flex items-center justify-center gap-2 shadow-md hover:bg-secondary-container active:scale-98 transition-all" id="btn-generate-share" type="button">
+<span class="material-symbols-outlined text-[24px]">send</span>
+<span>Generate &amp; Share Invoice</span>
+</button>
+<!-- Quick Channel Distribution Badges -->
+<div class="flex items-center justify-center gap-3 py-1">
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-secondary font-label-sm text-label-sm transition-colors" title="Instant WhatsApp Invoice" type="button">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[18px]">chat</span> WhatsApp
+      </button>
+<span class="text-on-surface-variant/30">•</span>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-secondary font-label-sm text-label-sm transition-colors" title="Download PDF" type="button">
+<span class="material-symbols-outlined text-secondary text-[18px]">picture_as_pdf</span> PDF Receipt
+      </button>
+<span class="text-on-surface-variant/30">•</span>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-secondary font-label-sm text-label-sm transition-colors" title="Email Copy" type="button">
+<span class="material-symbols-outlined text-on-surface text-[18px]">mail</span> Email
+      </button>
+</div>
+<!-- Secondary Utilities -->
+<div class="grid grid-cols-2 gap-space-sm pt-1">
+<button class="h-11 rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg flex items-center justify-center gap-1.5 hover:bg-surface-container-high transition-colors active:scale-98" id="btn-save-draft" type="button">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Save Draft</span>
+</button>
+<button class="h-11 rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg flex items-center justify-center gap-1.5 hover:bg-surface-container-high transition-colors active:scale-98" id="btn-print-pos" type="button">
+<span class="material-symbols-outlined text-[18px]">print</span>
+<span>Thermal POS</span>
+</button>
+</div>
+</div>
+<!-- Interactive Slide Drawer / Modal Preview for Inventory Selection (Hidden by default) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm hidden flex items-end sm:items-center justify-center p-0 sm:p-4" id="catalog-modal">
+<div class="bg-surface-container-lowest w-full max-w-lg rounded-t-2xl sm:rounded-2xl max-h-[85vh] flex flex-col shadow-xl overflow-hidden animate-in slide-in-from-bottom duration-200">
+<!-- Drawer Header -->
+<div class="p-space-md flex items-center justify-between border-b-0 bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">inventory_2</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Select from Catalog</h3>
+</div>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container" id="btn-close-modal" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Live Search Bar -->
+<div class="p-space-md pb-2">
+<div class="relative flex items-center">
+<input class="w-full h-11 pl-10 pr-4 rounded-lg bg-surface-container-low text-on-surface font-body-md focus:outline-none" placeholder="Search SKU, item name or barcode..." type="text"/>
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px]">search</span>
+</div>
+</div>
+<!-- Quick Item Catalog List -->
+<div class="p-space-md pt-0 overflow-y-auto space-y-2 flex-1">
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between hover:bg-surface-container transition-colors cursor-pointer" onclick="addCatalogItem('Mechanical RGB Keyboard', 79.99, 'KEY-RGB-01')">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px]">keyboard</span>
+<div>
+<p class="font-body-lg text-body-lg text-on-surface font-semibold">Mechanical RGB Keyboard</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">In Stock: 14 pcs • SKU: KEY-RGB-01</p>
+</div>
+</div>
+<span class="font-data-mono font-bold text-on-surface">$79.99</span>
+</div>
+<div ',="" 'mon-pv27')"="" 35.50,="" class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between hover:bg-surface-container transition-colors cursor-pointer" onclick="addCatalogItem('Monitor Privacy Filter 27\">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px]">desktop_windows</span>
+<div>
+<p class="font-body-lg text-body-lg text-on-surface font-semibold">Monitor Privacy Filter 27"</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">In Stock: 28 pcs • SKU: MON-PV27</p>
+</div>
+</div>
+<span class="font-data-mono font-bold text-on-surface">$35.50</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between hover:bg-surface-container transition-colors cursor-pointer" onclick="addCatalogItem('Multiport Hub 8-in-1', 49.00, 'HUB-08IN1')">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px]">hub</span>
+<div>
+<p class="font-body-lg text-body-lg text-on-surface font-semibold">Multiport Hub 8-in-1</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">In Stock: 9 pcs • SKU: HUB-08IN1</p>
+</div>
+</div>
+<span class="font-data-mono font-bold text-on-surface">$49.00</span>
+</div>
+</div>
+<!-- Drawer Footer -->
+<div class="p-space-md bg-surface-container-low flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tap any product to inject directly</span>
+<button class="px-4 py-2 rounded-lg bg-surface-container text-on-surface font-label-md" id="btn-cancel-modal" type="button">Done</button>
+</div>
+</div>
+</div>
+<!-- Toast Notification Container -->
+<div class="fixed top-20 left-1/2 -translate-x-1/2 z-50 bg-inverse-surface text-inverse-on-surface px-4 py-2.5 rounded-full font-label-md text-label-md shadow-lg opacity-0 pointer-events-none transition-all duration-300 flex items-center gap-2" id="toast-msg">
+<span class="material-symbols-outlined text-tertiary-fixed text-[18px]">check_circle</span>
+<span id="toast-text">Invoice generated successfully!</span>
+</div>
+</div>
+<script>
+  // UI Accordion Toggle
+  const toggleBtn = document.getElementById('toggle-accordion');
+  const accordionContent = document.getElementById('accordion-content');
+  const accordionIcon = document.getElementById('accordion-icon');
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      const isHidden = accordionContent.classList.contains('hidden');
+      if (isHidden) {
+        accordionContent.classList.remove('hidden');
+        accordionIcon.style.transform = 'rotate(180deg)';
+      } else {
+        accordionContent.classList.add('hidden');
+        accordionIcon.style.transform = 'rotate(0deg)';
+      }
+    });
+  }
+
+  // Payment Status Badges
+  const badgePaid = document.getElementById('badge-paid');
+  const badgePending = document.getElementById('badge-pending');
+
+  badgePaid.addEventListener('click', () => {
+    badgePaid.className = 'px-3 py-1 rounded-full font-label-sm text-label-sm font-bold transition-all bg-tertiary-fixed text-on-tertiary-fixed shadow-sm';
+    badgePending.className = 'px-3 py-1 rounded-full font-label-sm text-label-sm font-bold text-on-surface-variant hover:text-on-surface transition-all';
+  });
+
+  badgePending.addEventListener('click', () => {
+    badgePending.className = 'px-3 py-1 rounded-full font-label-sm text-label-sm font-bold transition-all bg-error-container text-on-error-container shadow-sm';
+    badgePaid.className = 'px-3 py-1 rounded-full font-label-sm text-label-sm font-bold text-on-surface-variant hover:text-on-surface transition-all';
+  });
+
+  // Payment Method Pill Switcher
+  const payOptions = document.querySelectorAll('.pay-option');
+  payOptions.forEach(opt => {
+    opt.addEventListener('click', () => {
+      payOptions.forEach(p => {
+        p.className = 'pay-option flex flex-col items-center justify-center p-2.5 rounded-xl bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-all text-center group';
+        const icon = p.querySelector('.material-symbols-outlined');
+        if (icon) icon.className = 'material-symbols-outlined text-[22px] mb-1 text-on-surface-variant';
+      });
+      opt.className = 'pay-option flex flex-col items-center justify-center p-2.5 rounded-xl bg-secondary text-on-secondary shadow-sm transition-all text-center group';
+      const activeIcon = opt.querySelector('.material-symbols-outlined');
+      if (activeIcon) activeIcon.className = 'material-symbols-outlined text-[22px] mb-1 text-on-secondary';
+    });
+  });
+
+  // Modal Controls
+  const modal = document.getElementById('catalog-modal');
+  const btnCatalog = document.getElementById('btn-open-catalog');
+  const btnCloseModal = document.getElementById('btn-close-modal');
+  const btnCancelModal = document.getElementById('btn-cancel-modal');
+
+  const openCatalog = () => modal.classList.remove('hidden');
+  const closeCatalog = () => modal.classList.add('hidden');
+
+  btnCatalog.addEventListener('click', openCatalog);
+  btnCloseModal.addEventListener('click', closeCatalog);
+  btnCancelModal.addEventListener('click', closeCatalog);
+
+  // Recalculate Totals
+  function recalculate() {
+    const lines = document.querySelectorAll('.line-total-val');
+    let sub = 0;
+    lines.forEach(l => {
+      const val = parseFloat(l.textContent.replace('$', '')) || 0;
+      sub += val;
+    });
+
+    const discount = 10.00;
+    const tax = +(sub * 0.08).toFixed(2);
+    const grand = Math.max(0, sub - discount + tax);
+
+    document.getElementById('summary-subtotal').textContent = '$' + sub.toFixed(2);
+    document.getElementById('summary-tax').textContent = '$' + tax.toFixed(2);
+    document.getElementById('summary-grandtotal').textContent = '$' + grand.toFixed(2);
+
+    const count = lines.length;
+    document.getElementById('item-count-badge').textContent = `${count} ${count === 1 ? 'item' : 'items'}`;
+  }
+
+  // Adjust Quantity
+  window.adjustQty = function(btn, delta) {
+    const parent = btn.parentElement;
+    const qtySpan = parent.querySelector('span.font-data-mono');
+    let qty = parseInt(qtySpan.textContent) + delta;
+    if (qty < 1) qty = 1;
+    qtySpan.textContent = qty;
+
+    const row = btn.closest('[data-id]');
+    const totalSpan = row.querySelector('.line-total-val');
+    const unitPrice = parseFloat(totalSpan.getAttribute('data-price')) || 0;
+    const newTotal = (unitPrice * qty).toFixed(2);
+    totalSpan.textContent = '$' + newTotal;
+
+    recalculate();
+  };
+
+  // Delete Item
+  window.deleteItem = function(btn) {
+    const card = btn.closest('[data-id]');
+    if (card) {
+      card.remove();
+      recalculate();
+      showToast('Item removed from bill');
+    }
+  };
+
+  // Add Item From Catalog
+  window.addCatalogItem = function(name, price, sku) {
+    const container = document.getElementById('line-items-container');
+    const id = Date.now();
+    const itemEl = document.createElement('div');
+    itemEl.className = 'p-3 rounded-lg bg-surface-container-low flex flex-col gap-2 relative group hover:bg-surface-container transition-colors';
+    itemEl.setAttribute('data-id', id);
+
+    itemEl.innerHTML = `
+      <div class="flex items-start justify-between gap-2">
+        <div class="flex items-center gap-2.5 min-w-0 flex-1">
+          <div class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center flex-shrink-0 shadow-sm text-secondary">
+            <span class="material-symbols-outlined text-[20px]">add_box</span>
+          </div>
+          <div class="min-w-0 flex-1">
+            <h3 class="font-body-lg text-body-lg text-on-surface font-semibold truncate">${name}</h3>
+            <p class="font-label-sm text-label-sm text-on-surface-variant">SKU: ${sku} • Unit: $${price.toFixed(2)}</p>
+          </div>
+        </div>
+        <button type="button" onclick="deleteItem(this)" aria-label="Remove item" class="w-8 h-8 rounded-full flex items-center justify-center text-error hover:bg-error-container transition-colors">
+          <span class="material-symbols-outlined text-[18px]">delete</span>
+        </button>
+      </div>
+      <div class="flex items-center justify-between pt-1">
+        <div class="flex items-center gap-2 bg-surface-container-lowest rounded-lg p-1 shadow-sm">
+          <button type="button" class="w-7 h-7 rounded flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors" onclick="adjustQty(this, -1)">
+            <span class="material-symbols-outlined text-[14px]">remove</span>
+          </button>
+          <span class="font-data-mono text-data-mono px-2 text-on-surface font-semibold">1</span>
+          <button type="button" class="w-7 h-7 rounded flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors" onclick="adjustQty(this, 1)">
+            <span class="material-symbols-outlined text-[14px]">add</span>
+          </button>
+        </div>
+        <div class="text-right">
+          <span class="font-label-sm text-label-sm text-on-surface-variant block">Line Total</span>
+          <span class="font-data-mono text-headline-sm text-on-surface font-bold line-total-val" data-price="${price.toFixed(2)}">$${price.toFixed(2)}</span>
+        </div>
+      </div>
+    `;
+
+    container.appendChild(itemEl);
+    closeCatalog();
+    recalculate();
+    showToast(`Added ${name}`);
+  };
+
+  // Toast Trigger
+  function showToast(text) {
+    const toast = document.getElementById('toast-msg');
+    const toastText = document.getElementById('toast-text');
+    toastText.textContent = text;
+    toast.classList.remove('opacity-0', 'pointer-events-none');
+    toast.classList.add('opacity-100');
+    setTimeout(() => {
+      toast.classList.remove('opacity-100');
+      toast.classList.add('opacity-0', 'pointer-events-none');
+    }, 2400);
+  }
+
+  // Quick Action Triggers
+  document.getElementById('btn-generate-share').addEventListener('click', () => {
+    showToast('Invoice INV-2024-8831 generated & shared!');
+  });
+
+  document.getElementById('btn-save-draft').addEventListener('click', () => {
+    showToast('Draft safely stored in cloud database');
+  });
+
+  document.getElementById('btn-print-pos').addEventListener('click', () => {
+    showToast('Sending receipt to Bluetooth thermal POS...');
+  });
+
+  document.getElementById('btn-contacts').addEventListener('click', () => {
+    showToast('Contacts picker opened');
+  });
+
+  document.getElementById('btn-custom-item').addEventListener('click', () => {
+    const customName = prompt('Enter custom item title:', 'Priority Delivery & Setup');
+    if (customName) {
+      const customPrice = parseFloat(prompt('Enter price ($):', '15.00')) || 15.00;
+      window.addCatalogItem(customName, customPrice, 'CUST-SVC');
+    }
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]" data-active-classes="text-secondary"><div class="h-16 px-gutter-mobile flex items-center justify-around"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="inventory" href="#"><span class="material-symbols-outlined text-[22px]">inventory_2</span><span class="font-label-sm text-label-sm">Inventory</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 transition-colors text-secondary" data-path="invoices" href="#"><span class="material-symbols-outlined text-[22px]">receipt_long</span><span class="font-label-sm text-label-sm">Invoices</span></a><div class="flex items-center justify-center px-1 -mt-5"><a class="w-12 h-12 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-[0_4px_12px_rgba(0,81,213,0.35)] hover:bg-secondary-container transition-transform active:scale-95" data-path="quick-bill" href="#"><span class="material-symbols-outlined text-[26px]">add</span></a></div><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined text-[22px]">analytics</span><span class="font-label-sm text-label-sm">Overview</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="profile" href="#"><span class="material-symbols-outlined text-[22px]">person</span><span class="font-label-sm text-label-sm">Profile</span></a></div></nav></body></html>

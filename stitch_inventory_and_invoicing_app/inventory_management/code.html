@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><title>Inventra</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary-fixed-variant": "#003ea8", "surface-container-lowest": "#ffffff", "primary-fixed": "#dae2fd", "outline": "#76777d", "secondary-container": "#316bf3", "on-tertiary": "#ffffff", "secondary": "#0051d5", "secondary-fixed": "#dbe1ff", "on-tertiary-fixed-variant": "#005236", "on-primary-fixed-variant": "#3f465c", "surface-container-low": "#eff4ff", "surface-tint": "#565e74", "surface-container-high": "#dce9ff", "tertiary-fixed": "#6ffbbe", "on-secondary-fixed": "#00174b", "background": "#f8f9ff", "on-surface": "#0b1c30", "primary-fixed-dim": "#bec6e0", "outline-variant": "#c6c6cd", "inverse-surface": "#213145", "surface-dim": "#cbdbf5", "on-background": "#0b1c30", "on-error-container": "#93000a", "surface-container": "#e5eeff", "inverse-primary": "#bec6e0", "tertiary": "#000000", "primary": "#000000", "on-secondary-container": "#fefcff", "error-container": "#ffdad6", "on-error": "#ffffff", "tertiary-fixed-dim": "#4edea3", "on-tertiary-container": "#009668", "surface-bright": "#f8f9ff", "surface-container-highest": "#d3e4fe", "surface-variant": "#d3e4fe", "on-surface-variant": "#45464d", "surface": "#f8f9ff", "error": "#ba1a1a", "primary-container": "#131b2e", "on-secondary": "#ffffff", "tertiary-container": "#002113", "inverse-on-surface": "#eaf1ff", "on-tertiary-fixed": "#002113", "on-primary-fixed": "#131b2e", "on-primary-container": "#7c839b", "secondary-fixed-dim": "#b4c5ff", "on-primary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2rem", "gutter": "1rem", "space-md": "1rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "gutter-mobile": "0.75rem", "space-lg": "1.5rem", "margin": "1.5rem", "margin-mobile": "1rem" }, "fontFamily": { "display-lg": ["Plus Jakarta Sans"], "label-md": ["Manrope"], "headline-sm": ["Plus Jakarta Sans"], "body-md": ["Manrope"], "body-sm": ["Manrope"], "headline-md": ["Plus Jakarta Sans"], "body-lg": ["Manrope"], "headline-lg": ["Plus Jakarta Sans"], "data-mono": ["Manrope"], "label-lg": ["Manrope"], "label-sm": ["Manrope"] }, "fontSize": { "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "500" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "data-mono": ["14px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }] } } } }</script><style>@layer base { html, body { width: 100vw; min-height: 100vh; margin: 0; padding: 0; } body { -webkit-font-smoothing: antialiased; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style></head><body class="bg-background font-body-md text-body-md text-on-surface min-h-screen flex flex-col antialiased selection:bg-secondary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0 flex-1"><img alt="Inventra Brand Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvItZ8HLKCapmU_986Q2z7ngdkTPrHvCsyNYybjZ_1OQ2WjmDMch7EM0JJ8TSgoyW7AAasacIh8COL2dhAONOrkXX_Q1vcm3iN5MiT-MnI0B6aZQhQa1FuG7xAy-aOJNegX4OmH28LDpaMQq7JyZakD6vLlepZeuvCwOYzDFRbD3rQrZdZq45pVWSWUU5DkyJwBhdtfCbY8iZLYpY4vipwxLAmL7BQFidNHeYEBgjXXFp8YK9vLnrR"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Inventra</span><span class="text-on-surface-variant/40 text-[10px]">•</span><span class="font-label-sm text-label-sm text-secondary font-semibold truncate">Inventory</span></div><button class="flex items-center gap-1 min-h-[24px] text-left group" type="button"><span class="font-headline-sm text-headline-sm text-on-surface truncate group-hover:text-secondary transition-colors">Acme Retail Hub</span><span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:text-secondary transition-colors">expand_more</span></button></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container transition-colors relative" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-secondary ring-2 ring-surface"></span></button><div class="pl-space-xs flex items-center"><button aria-label="Account profile" class="w-11 h-11 flex items-center justify-center rounded-full hover:opacity-90 transition-opacity" type="button"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWPBagfCMEbJzHbHCDSpinVYj_fynvcbs8T3nXO9wADOsYZWWmSAZbg7ghD4nSSxDSK5BqdYhWJhvWCw3R1ziA0hZG6pZkcCEzBDAbQZtnT0PeQMNlpiqSKRsLcuVCa8ENJR7EbyPqHUP-Zsmp9LUhVIcnTfUOCYr3czXUDDYD0lYW0YRHJvigff73UQrAxaOi5TIEJqyMRHDqUaNqnBfHO8CcqSaDbBgvgRgGB5XpspZXYzvL2Dxr"/></button></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full px-margin-mobile pb-8 space-y-space-md">
+<!-- Top Metric Cards (Horizontal scrolling for dense executive KPIs) -->
+<section class="w-full overflow-x-auto no-scrollbar -mx-margin-mobile px-margin-mobile pt-1">
+<div class="flex gap-space-sm min-w-max pb-1">
+<!-- Total Items -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm w-36 flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Total Items</span>
+<div class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px]">inventory_2</span>
+</div>
+</div>
+<div class="mt-2">
+<span class="font-headline-lg text-headline-lg text-on-surface font-display-lg">1,248</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container block font-medium">+12 this wk</span>
+</div>
+</div>
+<!-- Stock Value -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm w-44 flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Stock Value</span>
+<div class="w-6 h-6 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed-variant">
+<span class="material-symbols-outlined text-[15px]">payments</span>
+</div>
+</div>
+<div class="mt-2">
+<span class="font-headline-lg text-headline-lg text-on-surface font-display-lg">$48,250</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Margin: 41.2%</span>
+</div>
+</div>
+<!-- Low Stock Alert -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm w-36 flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Low Stock</span>
+<div class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[15px]">warning</span>
+</div>
+</div>
+<div class="mt-2">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-on-surface font-display-lg">4</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">items</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Restock req.</span>
+</div>
+</div>
+<!-- Out of Stock -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm w-36 flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Out of Stock</span>
+<div class="w-6 h-6 rounded-full bg-error-container flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[15px]">remove_shopping_cart</span>
+</div>
+</div>
+<div class="mt-2">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-error font-display-lg">2</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">SKUs</span>
+</div>
+<span class="font-label-sm text-label-sm text-error font-semibold">Immediate loss</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Global Actions Toolbar -->
+<section class="flex items-center gap-space-sm w-full">
+<button class="flex-1 bg-secondary text-on-secondary rounded-lg h-11 px-space-md flex items-center justify-center gap-space-xs shadow-sm active:scale-[0.98] transition-all" id="btn-add-item" type="button">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span class="font-label-lg text-label-lg font-semibold">Add New Item</span>
+</button>
+<button class="bg-surface-container-lowest text-on-surface rounded-lg h-11 px-space-md flex items-center justify-center gap-space-xs shadow-sm active:bg-surface-container transition-colors" id="btn-export-csv" type="button">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">ios_share</span>
+<span class="font-label-lg text-label-lg font-semibold">Export</span>
+</button>
+</section>
+<!-- Live Search & Barcode Scan Header -->
+<section class="w-full flex flex-col space-y-space-sm">
+<div class="flex items-center gap-space-xs w-full">
+<div class="flex-1 bg-surface-container-lowest rounded-lg shadow-sm h-11 px-space-sm flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">search</span>
+<input class="w-full bg-transparent font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none" id="inventory-search" placeholder="Search by SKU, product name..." type="text"/>
+<button class="hidden text-on-surface-variant hover:text-on-surface p-1" id="clear-search" type="button">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+<button aria-label="Scan item barcode" class="w-11 h-11 rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-center text-secondary active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[22px]">barcode_scanner</span>
+</button>
+</div>
+<!-- Category Filter Chips -->
+<div class="overflow-x-auto no-scrollbar -mx-margin-mobile px-margin-mobile py-0.5">
+<div class="flex items-center gap-space-xs min-w-max" id="category-chips">
+<button class="category-chip h-8 px-space-md rounded-full font-label-md text-label-md bg-on-surface text-surface-container-lowest shadow-sm transition-colors" data-category="all" type="button">All (1,248)</button>
+<button class="category-chip h-8 px-space-md rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface-variant hover:text-on-surface shadow-sm transition-colors" data-category="electronics" type="button">Electronics</button>
+<button class="category-chip h-8 px-space-md rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface-variant hover:text-on-surface shadow-sm transition-colors" data-category="apparel" type="button">Apparel</button>
+<button class="category-chip h-8 px-space-md rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface-variant hover:text-on-surface shadow-sm transition-colors" data-category="groceries" type="button">Groceries</button>
+<button class="category-chip h-8 px-space-md rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface-variant hover:text-on-surface shadow-sm transition-colors" data-category="hardware" type="button">Hardware</button>
+</div>
+</div>
+</section>
+<!-- Inventory Listing Header / Quick Filter Toggle -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Catalogue Items</span>
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded-full text-on-surface-variant font-semibold" id="visible-count">5</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-md text-label-md">
+<span>Sort:</span>
+<button class="text-secondary font-semibold flex items-center gap-0.5" type="button">
+        Stock Level <span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+</button>
+</div>
+</div>
+<!-- Inventory Cards Stream -->
+<div class="flex flex-col space-y-space-sm" id="inventory-list">
+<!-- Item 1: Wireless Ergonomic Mouse -->
+<article class="inventory-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col space-y-space-sm" data-category="electronics" data-name="wireless ergonomic mouse" data-sku="sku-8842">
+<div class="flex items-start gap-space-sm">
+<div class="w-16 h-16 rounded-lg overflow-hidden bg-surface-container flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="High-end sleek dark gray matte wireless ergonomic vertical mouse isolated against minimal clean background studio lighting with subtle reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4WE7gXGJauyoJoMPyG3d1JvLV1uiWtfLu_rys77ghiw4U10Fa-JH8qVpIF1R-0wNaofi8bfNlefyK6XARo7juEPqHoV7VNcWGV8c3m-OysPPQuZfKKrApJsBabTXwZNppBJYXyZWP4iIQA6IBE8j1R91m8N_Si50VR5ojchITnmHsYYmCP_jpRHs-rOjRpFQoI26YKRuAtbEMSOnL06bka8MMRLM0dNvpyH1687xj3kjMdsWNr9Gt"/>
+<span class="absolute bottom-1 right-1 bg-on-surface/75 text-surface-container-lowest text-[9px] px-1 rounded font-data-mono">EL</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-start justify-between gap-1">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Wireless Ergonomic Mouse</h3>
+<div class="flex items-center gap-space-xs mt-0.5">
+<span class="font-data-mono text-label-sm text-on-surface-variant font-semibold">SKU-8842</span>
+<span class="text-on-surface-variant/40 text-[10px]">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Aisle 3B</span>
+</div>
+</div>
+<button aria-label="Item options" class="context-trigger w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors -mr-1" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<div class="flex items-center gap-space-sm mt-1">
+<span class="font-headline-sm text-headline-sm text-on-surface font-display-lg">$29.99</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cost: $13.50</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container bg-surface-container-low px-1.5 py-0.5 rounded font-bold">55% mrgn</span>
+</div>
+</div>
+</div>
+<!-- Footer action bar inside card -->
+<div class="bg-surface-container-low/60 rounded-lg p-2 flex items-center justify-between gap-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-label-sm font-label-sm bg-surface-container-highest text-secondary font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+          In Stock (<span class="stock-display" data-val="84">84</span> units)
+        </span>
+<!-- Quantity Stepper Controls -->
+<div class="flex items-center gap-1">
+<button aria-label="Decrease quantity" class="stepper-btn dec-btn w-8 h-8 rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-center text-on-surface active:bg-surface-container active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="font-data-mono text-data-mono text-on-surface font-bold min-w-[32px] text-center current-qty">84</span>
+<button aria-label="Increase quantity" class="stepper-btn inc-btn w-8 h-8 rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-center text-on-surface active:bg-surface-container active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Item 2: Organic Cotton T-Shirt (M) - LOW STOCK -->
+<article class="inventory-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col space-y-space-sm" data-category="apparel" data-name="organic cotton t-shirt (m)" data-sku="sku-1093">
+<div class="flex items-start gap-space-sm">
+<div class="w-16 h-16 rounded-lg overflow-hidden bg-surface-container flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Folded premium heavyweight heather gray organic cotton t-shirt on a neat wood display table soft cinematic lighting retail display" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsmnkmzf0WmPOYTk6FZ_LP-Y_T0pP12neaauLhZqrfNDuIs0_xJRIMA7tLGmkIFP9jjtgLLYMkTmk90HDmTN-6Y74c2O86QYm7gILphWbdPL5EP9k0N_4kClGWQMjY4AoMI0mn2ec9ha5pYUcdufND84x5hVGWvQx5NZ4zbvlU4prGEzKKtRP-lBnZsrImJ2mN79r7JLm7l600OPM60S7244uuGQYG7I8nQ2UElGclIg3oTDlFRLmu"/>
+<span class="absolute bottom-1 right-1 bg-on-surface/75 text-surface-container-lowest text-[9px] px-1 rounded font-data-mono">AP</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-start justify-between gap-1">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Organic Cotton T-Shirt (M)</h3>
+<div class="flex items-center gap-space-xs mt-0.5">
+<span class="font-data-mono text-label-sm text-on-surface-variant font-semibold">SKU-1093</span>
+<span class="text-on-surface-variant/40 text-[10px]">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Rack 12</span>
+</div>
+</div>
+<button aria-label="Item options" class="context-trigger w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors -mr-1" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<div class="flex items-center gap-space-sm mt-1">
+<span class="font-headline-sm text-headline-sm text-on-surface font-display-lg">$18.50</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cost: $7.20</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container bg-surface-container-low px-1.5 py-0.5 rounded font-bold">61% mrgn</span>
+</div>
+</div>
+</div>
+<!-- Footer status with Low Stock highlighting -->
+<div class="bg-surface-container-low/60 rounded-lg p-2 flex items-center justify-between gap-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-label-sm font-label-sm bg-surface-container-high text-secondary font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+          Low Stock (<span class="stock-display" data-val="4">4</span> left - Alert)
+        </span>
+<div class="flex items-center gap-1">
+<button aria-label="Decrease quantity" class="stepper-btn dec-btn w-8 h-8 rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-center text-on-surface active:bg-surface-container active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="font-data-mono text-data-mono text-on-surface font-bold min-w-[32px] text-center current-qty">4</span>
+<button aria-label="Increase quantity" class="stepper-btn inc-btn w-8 h-8 rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-center text-on-surface active:bg-surface-container active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Item 3: USB-C Fast Charging Cable 2m - HEALTHY HIGH VOLUME -->
+<article class="inventory-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col space-y-space-sm" data-category="electronics" data-name="usb-c fast charging cable 2m" data-sku="sku-3310">
+<div class="flex items-start gap-space-sm">
+<div class="w-16 h-16 rounded-lg overflow-hidden bg-surface-container flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Braided nylon durable black USB-C fast charging cable coiled neatly beside a modern laptop minimalist technology tabletop setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU76cuhH4qTIDI0ycmgnJbS-D0CbQaUBwUuYhl2cIZ-mMTknmQirrkYt1w1Z2DtU8hdC2qmp2LWkRzhlJq9odFe3e00QiyIn2umhY01YOQGozwsCqpQSQWnFDlsOB8Qg-2LHWVO2q91M55FsQXkHztcnyBldINJ4nnCDZ6zmQ9GTm-IBO-hJpcLStHPEopBAjMFyWVjZ4N1OSXpIWTJq55JqKnLOV4WLlRqLxhBRl8-zXNg4Ad8mh8"/>
+<span class="absolute bottom-1 right-1 bg-on-surface/75 text-surface-container-lowest text-[9px] px-1 rounded font-data-mono">EL</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-start justify-between gap-1">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">USB-C Fast Charging Cable 2m</h3>
+<div class="flex items-center gap-space-xs mt-0.5">
+<span class="font-data-mono text-label-sm text-on-surface-variant font-semibold">SKU-3310</span>
+<span class="text-on-surface-variant/40 text-[10px]">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Bin 04</span>
+</div>
+</div>
+<button aria-label="Item options" class="context-trigger w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors -mr-1" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<div class="flex items-center gap-space-sm mt-1">
+<span class="font-headline-sm text-headline-sm text-on-surface font-display-lg">$14.99</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cost: $3.80</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container bg-surface-container-low px-1.5 py-0.5 rounded font-bold">74% mrgn</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low/60 rounded-lg p-2 flex items-center justify-between gap-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-label-sm font-label-sm bg-surface-container text-on-tertiary-container font-semibold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+          Healthy (<span class="stock-display" data-val="142">142</span> units)
+        </span>
+<div class="flex items-center gap-1">
+<button aria-label="Decrease quantity" class="stepper-btn dec-btn w-8 h-8 rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-center text-on-surface active:bg-surface-container active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="font-data-mono text-data-mono text-on-surface font-bold min-w-[32px] text-center current-qty">142</span>
+<button aria-label="Increase quantity" class="stepper-btn inc-btn w-8 h-8 rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-center text-on-surface active:bg-surface-container active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Item 4: Ceramic Coffee Mug 350ml - OUT OF STOCK -->
+<article class="inventory-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col space-y-space-sm opacity-90" data-category="groceries" data-name="ceramic coffee mug 350ml" data-sku="sku-6621">
+<div class="flex items-start gap-space-sm">
+<div class="w-16 h-16 rounded-lg overflow-hidden bg-surface-container flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Handcrafted matte speckled off-white ceramic coffee mug on a slate coaster beside freshly roasted whole coffee beans soft warm morning sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ06a0mkK5pF7rhLj-B-q0A9dfJld6Hz5Xut1ao2-8zxMh7OoMwXNZ9lEFGyK2sTyBTcT9nM9rBkHKdAUE8tfba9jegljXJb49gc-mzCJAQSt6_ISLSqKYDnXM4y0n71GJg6ACO6W_vPDfhrm1-YwRgTCKGA5vCHiWowEVYDBQw_nwDqoiJi-y1jxIBxI8rogv_uWyq5jxEnUri3U27cDoVrvt7JnYDWSjXNZPH3KHPaKuzzByD2UV"/>
+<span class="absolute bottom-1 right-1 bg-on-surface/75 text-surface-container-lowest text-[9px] px-1 rounded font-data-mono">HM</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-start justify-between gap-1">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Ceramic Coffee Mug 350ml</h3>
+<div class="flex items-center gap-space-xs mt-0.5">
+<span class="font-data-mono text-label-sm text-on-surface-variant font-semibold">SKU-6621</span>
+<span class="text-on-surface-variant/40 text-[10px]">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Section G</span>
+</div>
+</div>
+<button aria-label="Item options" class="context-trigger w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors -mr-1" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<div class="flex items-center gap-space-sm mt-1">
+<span class="font-headline-sm text-headline-sm text-on-surface font-display-lg">$12.00</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cost: $4.50</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container bg-surface-container-low px-1.5 py-0.5 rounded font-bold">62% mrgn</span>
+</div>
+</div>
+</div>
+<div class="bg-error-container/40 rounded-lg p-2 flex items-center justify-between gap-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-label-sm font-label-sm bg-error-container text-error font-semibold">
+<span class="material-symbols-outlined text-[14px]">error</span>
+          Out of Stock (<span class="stock-display" data-val="0">0</span> units)
+        </span>
+<div class="flex items-center gap-1">
+<button aria-label="Decrease quantity" class="stepper-btn dec-btn w-8 h-8 rounded-lg bg-surface-container-lowest/60 shadow-sm flex items-center justify-center text-outline-variant cursor-not-allowed" disabled="" type="button">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="font-data-mono text-data-mono text-error font-bold min-w-[32px] text-center current-qty">0</span>
+<button aria-label="Increase quantity" class="stepper-btn inc-btn w-8 h-8 rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-center text-on-surface active:bg-surface-container active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Item 5: Stainless Steel Water Bottle 1L -->
+<article class="inventory-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col space-y-space-sm" data-category="hardware" data-name="stainless steel water bottle 1l" data-sku="sku-9920">
+<div class="flex items-start gap-space-sm">
+<div class="w-16 h-16 rounded-lg overflow-hidden bg-surface-container flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Brushed stainless steel vacuum insulated reusable water bottle standing upright outdoors on a smooth granite rock with soft natural bokeh" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVHOwWUBL7v9-JXZC3Ea0rRpqpXy1uZgfu--vHzZJs4MQ5Nt7uwvsxe5yFKy7TDhyJWrPWvAMI44qnsU7DcK7sekqWbELviecUDKeM1X36Ptb_xwwwe3eDxaW5hURpj1bGbb_37b-NVXrRgZcEGteslcvqIOtWD3ElbaSufZFmX0_dyTHJ84ovMJYY5OcoMS-5hG7kMszksyJOr9FkgbbVnmbj31bZE_GlRxz3-Thc8x2DWBSWcrQp"/>
+<span class="absolute bottom-1 right-1 bg-on-surface/75 text-surface-container-lowest text-[9px] px-1 rounded font-data-mono">HW</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-start justify-between gap-1">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Stainless Steel Water Bottle 1L</h3>
+<div class="flex items-center gap-space-xs mt-0.5">
+<span class="font-data-mono text-label-sm text-on-surface-variant font-semibold">SKU-9920</span>
+<span class="text-on-surface-variant/40 text-[10px]">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Aisle 5C</span>
+</div>
+</div>
+<button aria-label="Item options" class="context-trigger w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors -mr-1" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<div class="flex items-center gap-space-sm mt-1">
+<span class="font-headline-sm text-headline-sm text-on-surface font-display-lg">$24.50</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cost: $9.80</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container bg-surface-container-low px-1.5 py-0.5 rounded font-bold">60% mrgn</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low/60 rounded-lg p-2 flex items-center justify-between gap-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-label-sm font-label-sm bg-surface-container-highest text-secondary font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+          In Stock (<span class="stock-display" data-val="56">56</span> units)
+        </span>
+<div class="flex items-center gap-1">
+<button aria-label="Decrease quantity" class="stepper-btn dec-btn w-8 h-8 rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-center text-on-surface active:bg-surface-container active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="font-data-mono text-data-mono text-on-surface font-bold min-w-[32px] text-center current-qty">56</span>
+<button aria-label="Increase quantity" class="stepper-btn inc-btn w-8 h-8 rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-center text-on-surface active:bg-surface-container active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+<!-- Empty Search State -->
+<div class="hidden flex-col items-center justify-center py-12 px-4 text-center" id="no-results-state">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant mb-3">
+<span class="material-symbols-outlined text-[32px]">inventory_2</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">No products found</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 max-w-xs">We couldn't find matches for your current search or category filter.</p>
+<button class="mt-4 px-4 py-2 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md" id="reset-filter-btn" type="button">Reset Filters</button>
+</div>
+<!-- Context Action Bottom Sheet / Floating Menu (hidden initially) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm hidden items-end justify-center transition-opacity duration-200" id="context-sheet">
+<div class="bg-surface-container-lowest rounded-t-2xl w-full max-w-md p-space-lg shadow-xl space-y-space-md transform translate-y-full transition-transform duration-300 ease-out" id="context-sheet-panel">
+<div class="w-12 h-1 bg-outline-variant rounded-full mx-auto"></div>
+<div class="flex items-center justify-between">
+<div class="min-w-0 flex-1">
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate" id="sheet-item-title">Item Options</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-data-mono" id="sheet-item-sku">SKU</span>
+</div>
+<button class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant" id="close-context-sheet" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="grid grid-cols-1 gap-space-xs pt-1">
+<button class="w-full flex items-center gap-space-sm p-3 rounded-lg hover:bg-surface-container-low text-left transition-colors" type="button">
+<div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface block">Edit Product Details</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Update price, cost, supplier &amp; thresholds</span>
+</div>
+</button>
+<button class="w-full flex items-center gap-space-sm p-3 rounded-lg hover:bg-surface-container-low text-left transition-colors" type="button">
+<div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[20px]">qr_code_2</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface block">Generate &amp; Print Barcode</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Export ready-to-print shelf sticker PDF</span>
+</div>
+</button>
+<button class="w-full flex items-center gap-space-sm p-3 rounded-lg hover:bg-surface-container-low text-left transition-colors" type="button">
+<div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[20px]">history</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface block">Stock Movement Log</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Audit chronological in/out entries</span>
+</div>
+</button>
+<button class="w-full flex items-center gap-space-sm p-3 rounded-lg hover:bg-error-container/40 text-left transition-colors" type="button">
+<div class="w-9 h-9 rounded-full bg-error-container flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg text-error block">Archive or Delete Item</span>
+<span class="font-body-sm text-body-sm text-error/80 block">Remove SKU from active stock register</span>
+</div>
+</button>
+</div>
+</div>
+</div>
+<!-- Micro Toast for feedback -->
+<div class="fixed bottom-20 left-1/2 -translate-x-1/2 z-50 bg-inverse-surface text-inverse-on-surface px-4 py-2.5 rounded-full shadow-lg font-label-md text-label-md flex items-center gap-2 opacity-0 pointer-events-none transition-all duration-200" id="toast">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed">check_circle</span>
+<span id="toast-message">Quantity updated</span>
+</div>
+<!-- Floating Quick Barcode Scan Trigger (Bottom Right above nav bar) -->
+<div class="fixed right-4 bottom-20 z-40">
+<button aria-label="Quick Scan Barcode" class="w-14 h-14 rounded-full bg-secondary text-on-secondary shadow-lg flex items-center justify-center active:scale-90 transition-transform relative group" id="floating-scanner-btn" type="button">
+<span class="material-symbols-outlined text-[28px]">qr_code_scanner</span>
+<span class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-tertiary-fixed-dim rounded-full"></span>
+</button>
+</div>
+</div>
+<script>
+  (function() {
+    const searchInput = document.getElementById('inventory-search');
+    const clearSearchBtn = document.getElementById('clear-search');
+    const cards = Array.from(document.querySelectorAll('.inventory-card'));
+    const categoryChips = document.querySelectorAll('.category-chip');
+    const countDisplay = document.getElementById('visible-count');
+    const noResults = document.getElementById('no-results-state');
+    const resetFilterBtn = document.getElementById('reset-filter-btn');
+    const toast = document.getElementById('toast');
+    const toastMsg = document.getElementById('toast-message');
+
+    // Context Bottom Sheet
+    const sheet = document.getElementById('context-sheet');
+    const sheetPanel = document.getElementById('context-sheet-panel');
+    const closeSheetBtn = document.getElementById('close-context-sheet');
+    const sheetTitle = document.getElementById('sheet-item-title');
+    const sheetSku = document.getElementById('sheet-item-sku');
+
+    let activeCategory = 'all';
+
+    function showToast(text) {
+      toastMsg.textContent = text;
+      toast.classList.remove('opacity-0', 'pointer-events-none', '-translate-y-2');
+      toast.classList.add('opacity-100', 'translate-y-0');
+      setTimeout(() => {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', 'pointer-events-none', '-translate-y-2');
+      }, 1600);
+    }
+
+    function filterItems() {
+      const query = (searchInput.value || '').trim().toLowerCase();
+      let visible = 0;
+
+      cards.forEach(card => {
+        const name = card.getAttribute('data-name') || '';
+        const sku = card.getAttribute('data-sku') || '';
+        const category = card.getAttribute('data-category') || '';
+
+        const matchesQuery = !query || name.includes(query) || sku.includes(query);
+        const matchesCategory = activeCategory === 'all' || category === activeCategory;
+
+        if (matchesQuery && matchesCategory) {
+          card.classList.remove('hidden');
+          visible++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      countDisplay.textContent = visible;
+      if (visible === 0) {
+        noResults.classList.remove('hidden');
+        noResults.classList.add('flex');
+      } else {
+        noResults.classList.add('hidden');
+        noResults.classList.remove('flex');
+      }
+
+      if (query.length > 0) {
+        clearSearchBtn.classList.remove('hidden');
+      } else {
+        clearSearchBtn.classList.add('hidden');
+      }
+    }
+
+    searchInput.addEventListener('input', filterItems);
+    clearSearchBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      filterItems();
+      searchInput.focus();
+    });
+
+    categoryChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        categoryChips.forEach(c => {
+          c.classList.remove('bg-on-surface', 'text-surface-container-lowest');
+          c.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
+        });
+        chip.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+        chip.classList.add('bg-on-surface', 'text-surface-container-lowest');
+        
+        activeCategory = chip.getAttribute('data-category');
+        filterItems();
+      });
+    });
+
+    resetFilterBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      activeCategory = 'all';
+      categoryChips.forEach((c, idx) => {
+        if (idx === 0) {
+          c.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+          c.classList.add('bg-on-surface', 'text-surface-container-lowest');
+        } else {
+          c.classList.remove('bg-on-surface', 'text-surface-container-lowest');
+          c.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
+        }
+      });
+      filterItems();
+    });
+
+    // Stepper Quick-Actions
+    document.querySelectorAll('.inventory-card').forEach(card => {
+      const decBtn = card.querySelector('.dec-btn');
+      const incBtn = card.querySelector('.inc-btn');
+      const qtyDisplay = card.querySelector('.current-qty');
+      const stockDisplay = card.querySelector('.stock-display');
+      const productName = card.querySelector('h3').textContent;
+
+      if (decBtn && incBtn && qtyDisplay) {
+        decBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          let current = parseInt(qtyDisplay.textContent, 10) || 0;
+          if (current > 0) {
+            current -= 1;
+            qtyDisplay.textContent = current;
+            if (stockDisplay) stockDisplay.textContent = current;
+            showToast(`Adjusted: ${productName} (-1)`);
+          }
+        });
+
+        incBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          let current = parseInt(qtyDisplay.textContent, 10) || 0;
+          current += 1;
+          qtyDisplay.textContent = current;
+          if (stockDisplay) stockDisplay.textContent = current;
+          showToast(`Adjusted: ${productName} (+1)`);
+        });
+      }
+
+      // Context options open
+      const trigger = card.querySelector('.context-trigger');
+      if (trigger) {
+        trigger.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const name = card.querySelector('h3').textContent;
+          const sku = card.getAttribute('data-sku') ? card.getAttribute('data-sku').toUpperCase() : 'SKU';
+          sheetTitle.textContent = name;
+          sheetSku.textContent = sku;
+          
+          sheet.classList.remove('hidden');
+          sheet.classList.add('flex');
+          setTimeout(() => {
+            sheetPanel.classList.remove('translate-y-full');
+            sheetPanel.classList.add('translate-y-0');
+          }, 10);
+        });
+      }
+    });
+
+    function closeSheet() {
+      sheetPanel.classList.remove('translate-y-0');
+      sheetPanel.classList.add('translate-y-full');
+      setTimeout(() => {
+        sheet.classList.add('hidden');
+        sheet.classList.remove('flex');
+      }, 250);
+    }
+
+    closeSheetBtn.addEventListener('click', closeSheet);
+    sheet.addEventListener('click', (e) => {
+      if (e.target === sheet) closeSheet();
+    });
+
+    // Scanner triggers
+    const floatingScan = document.getElementById('floating-scanner-btn');
+    if (floatingScan) {
+      floatingScan.addEventListener('click', () => {
+        showToast('Camera barcode scanner activated');
+      });
+    }
+
+    const exportBtn = document.getElementById('btn-export-csv');
+    if (exportBtn) {
+      exportBtn.addEventListener('click', () => {
+        showToast('Generating CSV ledger...');
+      });
+    }
+
+    const addItemBtn = document.getElementById('btn-add-item');
+    if (addItemBtn) {
+      addItemBtn.addEventListener('click', () => {
+        showToast('New SKU creation wizard opened');
+      });
+    }
+
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]" data-active-classes="text-secondary"><div class="h-16 px-gutter-mobile flex items-center justify-around"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 transition-colors text-secondary" data-path="inventory" href="#"><span class="material-symbols-outlined text-[22px]">inventory_2</span><span class="font-label-sm text-label-sm">Inventory</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="invoices" href="#"><span class="material-symbols-outlined text-[22px]">receipt_long</span><span class="font-label-sm text-label-sm">Invoices</span></a><div class="flex items-center justify-center px-1 -mt-5"><a class="w-12 h-12 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-[0_4px_12px_rgba(0,81,213,0.35)] hover:bg-secondary-container transition-transform active:scale-95" data-path="quick-bill" href="#"><span class="material-symbols-outlined text-[26px]">add</span></a></div><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined text-[22px]">analytics</span><span class="font-label-sm text-label-sm">Overview</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="profile" href="#"><span class="material-symbols-outlined text-[22px]">person</span><span class="font-label-sm text-label-sm">Profile</span></a></div></nav></body></html>

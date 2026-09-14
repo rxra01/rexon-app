@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "687145716846",
+    "project_id": "rexon-35454",
+    "storage_bucket": "rexon-35454.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:687145716846:android:f9ebffc67b955f5dd6ea7f",
+        "android_client_info": {
+          "package_name": "com.example.rexon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "687145716846-q5dev3kmktrvmiusmkipupj3h0hpvp54.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rexon",
+            "certificate_hash": "e988103328192861d6b877c5d6a506e0f26e2e5a"
+          }
+        },
+        {
+          "client_id": "687145716846-h0s7c9727nb10vfau7qpn6q8r2oumjq8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8KnnpAargtfmoUvkGDqjH3AzzIKuZ9lI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "687145716846-h0s7c9727nb10vfau7qpn6q8r2oumjq8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
