@@ -1,4 +1,4 @@
-package com.rexon.rexon
+package com.example.rexon
 
 import io.flutter.embedding.android.FlutterActivity
 
